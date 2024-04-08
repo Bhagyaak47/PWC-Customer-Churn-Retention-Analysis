@@ -6,43 +6,43 @@ PwC Power BI Virtual Case Experience Task 2- Customer Retention and Churn Analys
   
 In this project Create a dashboard in Power BI for the PhoneNow Company that reflects the Churn analysis and Customer Information for further decision making and strategies for customer retention. The telecom Retention Manager has scheduled a meeting with the engagement partner at PwC to cover these points:
 
-1.Customers in the telecom industry are hard-earned: we don’t want to lose them
-2.The retention department is here to get customers back in case of termination
-3.Currently, we get in touch after they have terminated the contract, but this is reactionary: it would be better to know in advance who is at risk
-4.We have done customer analysis with Excel: it has always ended in a dead-end  
-5.We would like to know more about our customers: visualised clearly so that it’s self-explanatory for our management.
+- Customers in the telecom industry are hard-earned: we don’t want to lose them
+- The retention department is here to get customers back in case of termination
+- Currently, we get in touch after they have terminated the contract, but this is reactionary: it would be better to know in advance who is at risk
+- We have done customer analysis with Excel: it has always ended in a dead-end  
+- We would like to know more about our customers: visualised clearly so that it’s self-explanatory for our management.
 
 # Dataset:
 
 The dataset used for this task was presented by https://www.theforage.com
 
 #  DAX Formulas: 
-1.% Churn Rate = DIVIDE(CALCULATE(COUNT(Churn[Churn]),Churn[Churn]="Yes"),COUNT(Churn[Churn]),0)
-2.% of Senior Citizen = DIVIDE(CALCULATE(COUNT(Churn[SeniorCitizen]),Churn[SeniorCitizen]=1,Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[SeniorCitizen]),Churn[Churn]="Yes"),0)
-3.% Dependants = DIVIDE(CALCULATE(COUNT(Churn[Dependents]),Churn[Dependents]= "Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[Dependents]),Churn[Churn]="Yes"),0)
-4.% Partner = DIVIDE(CALCULATE(COUNT(Churn[Partner]),Churn[Partner]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[Partner]),Churn[Churn]="Yes"),0)
-6.% Phone Service = DIVIDE(CALCULATE(COUNT(Churn[PhoneService]),Churn[PhoneService]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[PhoneService]),Churn[Churn]="Yes"),0)
-7.% Tech Support = DIVIDE(CALCULATE(COUNT(Churn[TechSupport]),Churn[TechSupport]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[TechSupport]),Churn[Churn]="Yes"),0)
-8.% Streaming TV = DIVIDE(CALCULATE(COUNT(Churn[StreamingTV]),Churn[StreamingTV]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[StreamingTV]),Churn[Churn]="Yes"),0)
-9.% Online Security = DIVIDE(CALCULATE(COUNT(Churn[OnlineSecurity]),Churn[OnlineSecurity]="Yes",Churn[Churn]="Yes"),CALCULATE(count(Churn[OnlineSecurity]),Churn[Churn]="Yes"),0)
-10.% Online Backup = DIVIDE(CALCULATE(COUNT(Churn[OnlineBackup]),Churn[OnlineBackup]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[OnlineBackup]),Churn[Churn]="Yes"),0)
-11.Device Protection = DIVIDE(CALCULATE(COUNT(Churn[DeviceProtection]),Churn[DeviceProtection]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[DeviceProtection]),Churn[Churn]="Yes"),0)
-12.% Yes-Multiple Lines = DIVIDE(CALCULATE(COUNT(Churn[MultipleLines]),Churn[MultipleLines]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[MultipleLines]),Churn[Churn]="Yes",Churn[MultipleLines]<> "No phone service"),0)
-13.% No- Multiple lines = DIVIDE(CALCULATE(COUNT(Churn[MultipleLines]),Churn[MultipleLines]="No",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[MultipleLines]),Churn[Churn]="Yes",Churn[MultipleLines]<> "No phone service"),0)
+- % Churn Rate = DIVIDE(CALCULATE(COUNT(Churn[Churn]),Churn[Churn]="Yes"),COUNT(Churn[Churn]),0)
+- % of Senior Citizen = DIVIDE(CALCULATE(COUNT(Churn[SeniorCitizen]),Churn[SeniorCitizen]=1,Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[SeniorCitizen]),Churn[Churn]="Yes"),0)
+- % Dependants = DIVIDE(CALCULATE(COUNT(Churn[Dependents]),Churn[Dependents]= "Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[Dependents]),Churn[Churn]="Yes"),0)
+- % Partner = DIVIDE(CALCULATE(COUNT(Churn[Partner]),Churn[Partner]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[Partner]),Churn[Churn]="Yes"),0)
+- % Phone Service = DIVIDE(CALCULATE(COUNT(Churn[PhoneService]),Churn[PhoneService]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[PhoneService]),Churn[Churn]="Yes"),0)
+- % Tech Support = DIVIDE(CALCULATE(COUNT(Churn[TechSupport]),Churn[TechSupport]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[TechSupport]),Churn[Churn]="Yes"),0)
+- % Streaming TV = DIVIDE(CALCULATE(COUNT(Churn[StreamingTV]),Churn[StreamingTV]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[StreamingTV]),Churn[Churn]="Yes"),0)
+- % Online Security = DIVIDE(CALCULATE(COUNT(Churn[OnlineSecurity]),Churn[OnlineSecurity]="Yes",Churn[Churn]="Yes"),CALCULATE(count(Churn[OnlineSecurity]),Churn[Churn]="Yes"),0)
+- % Online Backup = DIVIDE(CALCULATE(COUNT(Churn[OnlineBackup]),Churn[OnlineBackup]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[OnlineBackup]),Churn[Churn]="Yes"),0)
+- Device Protection = DIVIDE(CALCULATE(COUNT(Churn[DeviceProtection]),Churn[DeviceProtection]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[DeviceProtection]),Churn[Churn]="Yes"),0)
+- % Yes-Multiple Lines = DIVIDE(CALCULATE(COUNT(Churn[MultipleLines]),Churn[MultipleLines]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[MultipleLines]),Churn[Churn]="Yes",Churn[MultipleLines]<> "No phone service"),0)
+- % No- Multiple lines = DIVIDE(CALCULATE(COUNT(Churn[MultipleLines]),Churn[MultipleLines]="No",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[MultipleLines]),Churn[Churn]="Yes",Churn[MultipleLines]<> "No phone service"),0)
 
 
 # Data Cleaning/ Preparation:
 
-1.The data consists of over 7000 rows and 23 columns.
-2.Divided the tenure(in months) to different groups in years such as 0-1 year, 2-3 years etc
-3.Loaded the dataset in PowerBI and the remaining dataset was clean enough to perform the analysis directly.
+- The data consists of over 7000 rows and 23 columns.
+- Divided the tenure(in months) to different groups in years such as 0-1 year, 2-3 years etc
+- Loaded the dataset in PowerBI and the remaining dataset was clean enough to perform the analysis directly.
 
 
 # Questions to be answered :
-1.Customers who left within the last month
-2.Services each customer has signed up for phone, multiple lines, internet, online security, online backup, device protection, tech support, and streaming TV and movies
-3.Customer account information: how long as a customer, contract, payment method, paperless billing, monthly charges, total charges and the number of tickets opened in the categories of administrative and technical
-4.Demographic info about customers – gender, age range, and if they have partners and dependents.
+- Customers who left within the last month
+- Services each customer has signed up for phone, multiple lines, internet, online security, online backup, device protection, tech support, and streaming TV and movies
+- Customer account information: how long as a customer, contract, payment method, paperless billing, monthly charges, total charges and the number of tickets opened in the categories of administrative and technical
+- Demographic info about customers – gender, age range, and if they have partners and dependents.
 
 ![PWC Customer Churn_001](https://github.com/Bhagyaak47/PWC-Customer-Churn-Retention-Analysis/assets/152842490/4ecc2c6f-94f2-4cbd-9207-375d4d3da85e)
 
